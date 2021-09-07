@@ -6,7 +6,7 @@ The Problem here consist of two parts image classification and object detection.
 
 **Object Detection** -  It is the process in which we try to recognize the object as well as try to locate it. It look like it can do work of classification but it is expensive and require more time than classification model to train.
 
-The project is to allow a organization, which can be big fashion industry, or a retail shop, to get the trends which people like to wear in particular season, events or even in a country, which help them to stock clothes based on customer requirement. We are clasifying the cloths and counting the particular type of clothes in images that can give us the statistics of the clothes worn by the people more frequently.
+The project is to allow a organization, which can be big fashion industry, or a retail shop, to get the trends which people like to wear in particular season, events or even in a country, which help them to stock clothes based on customer requirement. We are classifying the cloths and counting the particular type of clothes in images that can give us the statistics of the clothes worn by the people more frequently. I also **create DenseNet from The scratch which allow change the size and number of blocks in our model. Further the dataset are in code-words see image in results therfore I have to use object detection to count various clothes in the dataset.**
 
 # DATASET
 The consist of 15000 train images, 3000 validation images and 7000 test images. Images contain people wearing clothes or clothes hanging by there own.
@@ -20,7 +20,7 @@ The consist of 15000 train images, 3000 validation images and 7000 test images. 
 **Part A (Classification)**
 1. The main task here is to load the images. I used google colab so I extract zip file direct in it. You can choose your own method.
 2. Load the images using dataloader function. Give path of images, path of labels and image size required for model.
-3. Creating DenseNet from scratch but built Keras DenseNet model (visit the link https://keras.io/api/applications/densenet/)  can also be used. Bulit-in model is trained weight which is easy to train if have low computation power but the DenseNet created in the code provide flexibility to  change the size of input image and denseNet Blocks as per requirement parameter total_iteration in the code allow you to change the size and number of blocks in our model.
+3. Creating DenseNet from scratch but built Keras DenseNet model (visit the link https://keras.io/api/applications/densenet/)  can also be used. Bulit-in model is trained weights which is easy to train if have low computation power but the DenseNet created in the code provide flexibility to  change the size of input image and denseNet Blocks as per requirement parameter total_iteration in the code allow you to change the size and number of blocks in our model.
 4. Create Instance of DenseNet class and use insatnce.Run() which will create the DenseNet Model.
 5. Load training and validation image using Data_loader and convert labels into categorical labels using MultiLabelBinarization an dfit data into it. 
 6. Train the model using appropriate hyper-parameters. 
